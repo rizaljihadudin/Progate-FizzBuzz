@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progate FizzBuzz</title>
+</head>
+<body>
+    <h1>Get a FizzBuzz Result!</h1>
+    Type a number: <input type="text" id="data"> <button onclick="getResult()">Click here!</button>
+    <hr>
+    <div id="result">
+
+    </div>
+
+    <script>
+        const getResult = () => {
+            let number = document.getElementById('data').value;
+            let text = '';
+            number = parseInt(number);
+            if(number % 3 == 0 && number % 5 == 0){
+                text = 'FizzBuzz!'
+            }else if(number % 3 == 0){
+                text = 'Fizz!'
+            }else if(number % 5 == 0){
+                text = 'Buzz'
+            }else{
+                text = number;
+            }
+
+            document.getElementById('result').innerHTML += text += '<br>';
+        }
+    </script>
+
+</body>
+</html>
